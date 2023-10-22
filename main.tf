@@ -21,7 +21,7 @@ module "workspace" {
   variables         = try(each.value.variables, [])
 
   vcs_repo = {
-    github_app_installation_id = data.tfe_github_app_installation.this.id
+    github_app_installation_id = var.github_app_installation_id
     identifier                 = each.value.vcs_repo_identifier
   }
 }

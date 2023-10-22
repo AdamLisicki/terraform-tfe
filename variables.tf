@@ -1,6 +1,5 @@
 variable "github_app_installation_id" {
-  default = 42408443
-  type    = number
+  type    = string
 }
 
 variable "github_organization_name" {
