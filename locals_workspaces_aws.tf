@@ -4,7 +4,7 @@
 #       for name, network in local.network : "${name}-aws-network" => {
 #         description         = "Automation for AWS network resources."
 #         execution_mode      = "remote"
-#         project_id          = module.tfe_project["engineering-thesis-project"].id
+#         project_id          = module.project["engineering-thesis-project"].id
 #         vcs_repo_identifier = "${var.github_organization_name}/terraform-aws-network"
 
 #         variables = [
@@ -31,7 +31,7 @@
 #       for name, cluster in local.cluster : "${name}-aws-cluster-${cluster.environment}" => {
 #         description         = "Automation for AWS cluster resources."
 #         execution_mode      = "remote"
-#         project_id          = module.tfe_project["engineering-thesis-project"].id
+#         project_id          = module.project["engineering-thesis-project"].id
 #         vcs_repo_identifier = "${var.github_organization_name}/terraform-aws-cluster"
 
 #         variables = [

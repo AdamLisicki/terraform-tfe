@@ -8,21 +8,21 @@ locals {
     "tfe" = {
       description         = "Automation workspace for Terraform Cloud resources."
       execution_mode      = "remote"
-      project_id          = module.tfe_project["engineering-thesis-project"].id
+      project_id          = module.project["engineering-thesis-project"].id
       vcs_repo_identifier = "${var.github_organization_name}/terraform-tfe"
     }
-
+  
     "github" = {
       description         = "Automation workspace for GitHub resources."
       execution_mode      = "local"
-      project_id          = module.tfe_project["engineering-thesis-project"].id
+      project_id          = module.project["engineering-thesis-project"].id
       vcs_repo_identifier = "${var.github_organization_name}/terraform-github"
     }
-
+  }
     # "product-service-prod" = {
     #   description         = "Automation for product service resources."
     #   execution_mode      = "remote"
-    #   project_id          = module.tfe_project["engineering-thesis-project"].id
+    #   project_id          = module.project["engineering-thesis-project"].id
     #   vcs_repo_identifier = "${var.github_organization_name}/terraform-product-service"
 
     #   variables = [
@@ -38,5 +38,5 @@ locals {
     #     },
     #   ]
     # }
-    }
+    # }
 }

@@ -1,4 +1,4 @@
-module "tfe_project"{
+module "project"{
     source = "./modules/terraform-tfe-project"
 
     for_each = local.projects
