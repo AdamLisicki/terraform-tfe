@@ -19,12 +19,12 @@ locals {
       vcs_repo_identifier = "${var.github_organization_name}/terraform-github"
     }
 
-    "aws-network" = {
-      description         = "Automation workspace for AWS network resources."
-      execution_mode      = "remote"
-      project_id          = module.project["engineering-thesis-project"].id
-      vcs_repo_identifier = "${var.github_organization_name}/terraform-aws-network"
-    }
+    # "aws-network" = {
+    #   description         = "Automation workspace for AWS network resources."
+    #   execution_mode      = "remote"
+    #   project_id          = module.project["engineering-thesis-project"].id
+    #   vcs_repo_identifier = "${var.github_organization_name}/terraform-aws-network"
+    # }
   
     # "product-service-prod" = {
     #   description         = "Automation for product service resources."
